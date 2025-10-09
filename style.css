@@ -1,16 +1,93 @@
+/*Css for Om mig side*/
 *{
     margin: 0;
     padding:0;
 }
+body {
+    font-family: 'Poppins', sans-serif;
+}
+h1, h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+.navbar {
+    background-color: rgba(4,9,30,0.9);
+    padding: 15px;
+    text-align: center;
+}
 
-.header{
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.hero{
+    color: white;
+    text-align: center;
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0,7),rgba(4,9,30,0,7)),url(images/Abdirahman.png.jpg);
-    
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url("images/Abdirahman.jpg");
     background-position: center;
     background-size: cover;
     position: relative;
 }
-   
-    
+img {
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.boxes{
+    display: flex;
+    justify-content: space-between;
+    gap:20px;
+    padding:40px;
+    background-color: #f4f4f4;
+}
+
+.box {
+    flex: 1;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s erase;
+}
+.box:hover {
+    transform: translateY(-5px);
+}
+
+.box h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.box p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: rgba(4, 9, 30, 0.8); /* matcher hero-baggrund med gennemsigtighed */
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
+.footer a {
+    color: #00bcd4; /* lys blå kontrastfarve */
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+    /*Css for Om CV side*/
