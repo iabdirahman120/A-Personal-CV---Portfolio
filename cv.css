@@ -1,140 +1,128 @@
-/* ===== Tema (matcher "Om mig") ===== */
+/* ========= Tema / base ========= */
+*{box-sizing:border-box}
 :root{
-  --navy: #04091e;                 /* mørk blå */
-  --navy-90: rgba(4,9,30,0.9);
-  --navy-80: rgba(4,9,30,0.8);
-  --accent: #00bcd4;               /* lys blå accent */
-  --bg: #f4f4f4;                   /* lys grå baggrund */
-  --card: #ffffff;                 /* hvidt kort */
-  --text: #333;                    /* primær tekst */
-  --muted: #555;                   /* sekundær tekst */
-  --ring: #e5e7eb;                 /* kant/skygge */
-  --container: 1100px;
+  --navy:#0f2749;      /* mørk blå som i billedet */
+  --navy-700:#10233f;
+  --ink:#0f172a;
+  --muted:#626d82;
+  --paper:#ffffff;
+  --bg:#f6f7fb;
+  --accent:#0ea5e9;    /* let blå accent til chips/dots */
+  --ring:#e5e7eb;
+  --container:1100px;
 }
-
-*{ box-sizing:border-box; }
-html,body{ height:100%; }
+html,body{height:100%}
 body{
   margin:0;
-  font: 16px/1.6 'Poppins', system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#1f2937;
+  background:var(--bg);
 }
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+img{max-width:100%;height:auto;display:block;border-radius:10px}
 
-/* ===== Header/Nav (samme vibe som .navbar) ===== */
-.container{ max-width:var(--container); margin:0 auto; padding:0 16px; }
-.site-header{
-  background: var(--navy-90);
-  color:#fff;
-  border-bottom: 1px solid #0003;
-  position: sticky; top:0; z-index:10;
-}
-.site-nav{
-  display:flex; align-items:center; justify-content:space-between; height:58px;
-}
-.site-nav .brand{ color:#fff; text-decoration:none; font-weight:700; }
-.site-nav ul{ list-style:none; display:flex; gap:30px; margin:0; padding:0; }
-.site-nav a{
-  color:#fff; text-decoration:none; font-weight:600; padding:6px 10px; border-radius:8px;
-}
-.site-nav a:hover,.site-nav a.active{ background: rgba(255,255,255,0.08); }
+/* ========= Navigation (Flexbox) ========= */
+.site-header{background:var(--navy);color:#fff;border-bottom:1px solid #0b1a34}
+.site-nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.site-nav .brand{color:#fff;text-decoration:none;font-weight:700}
+.site-nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0}
+.site-nav a{color:#e5e7eb;text-decoration:none;padding:6px 10px;border-radius:8px}
+.site-nav a.active,.site-nav a:hover{background:#0b1a34}
 
-/* ===== CV layout (Grid) ===== */
+/* ========= CV layout (CSS Grid) ========= */
 .cv{
-  max-width: var(--container);
-  margin: 24px auto 40px;
-  display: grid;
+  display:grid;
   grid-template-columns: 320px 1fr;
-  gap: 24px;
-  padding: 0 16px;
+  gap:24px;
+  padding:24px 0 40px;
 }
 
-/* Sidebar (mørk venstre kolonne) */
-.cv__sidebar{
-  background: var(--navy);
-  color:#fff;
-  padding: 24px 18px;
-  border-radius: 16px;
-  display:flex; flex-direction:column; gap:18px;
-}
-.avatar{ margin:0; text-align:center; display:flex; flex-direction:column; align-items:center; gap:8px; }
-.avatar img{
-  width:110px; height:110px; border-radius:50%; object-fit:cover;
-  border:3px solid #ffffff33; background:#ffffff22;
-}
-.name{ display:flex; flex-direction:column; align-items:center; gap:2px; }
-.name .firstname,.name .lastname{ font-size:22px; font-weight:800; line-height:1; }
-.name .role{ font-weight:600; color:#bfefff; }
-
-.cv__sidebar .card{
-  background: transparent;
-  border:1px solid #ffffff22;
+/* Venstre kolonne (mørk) */
+.cv-left{
+  background:var(--navy);
+  color:#e8edf6;
   border-radius:14px;
+  padding:22px 18px;
+  display:grid;
+  align-content:start;
+  gap:16px;
+}
+.name{margin:0;line-height:1.05;color:#fff;font-size:2rem}
+.name span{display:block}
+.tagline{margin:.25rem 0 1rem;color:#d1ddf4}
+
+.contact ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.contact a{color:#d1eaff}
+
+.panel{
+  border:1px solid #ffffff22;
+  border-radius:12px;
   padding:12px 14px;
+  background:#ffffff10;
 }
-.cv__sidebar .card h2{
-  font-size:14px; text-transform:uppercase; letter-spacing:.06em;
-  margin:0 0 8px; padding-bottom:6px; border-bottom:1px solid #ffffff22; color:#fff;
-}
-.list{ list-style:none; margin:0; padding:0; display:grid; gap:6px; }
-.skills{ list-style:none; margin:0; padding:0; display:grid; gap:8px; }
-.skills li{ display:flex; align-items:center; justify-content:space-between; gap:12px; }
-.skills li span:last-child{
-  font-family: "Segoe UI Symbol","Apple Color Emoji","Noto Color Emoji",sans-serif;
-  color:#ffd166; /* stjerner */
-}
+.panel h2{margin:0 0 8px;font-size:1rem;color:#fff;border-bottom:1px solid #ffffff22;padding-bottom:6px}
 
-/* Højre kolonne (kort på lys baggrund) */
-.cv__content{ display:grid; gap:20px; }
-.cv__content .card{
-  background: var(--card);
+/* Højre kolonne (lyse “kort”) */
+.cv-right{display:grid;gap:18px}
+.card{
+  background:var(--paper);
   border:1px solid var(--ring);
-  border-radius:16px;
+  border-radius:14px;
   padding:16px 18px;
-  box-shadow: 0 10px 22px -14px rgba(4,9,30,.25);
+  box-shadow:0 10px 24px -18px rgba(16,35,63,.35);
 }
-.cv__content .card h2{
-  margin:0 0 8px; color: var(--accent); font-size:18px; font-weight:700;
-}
-.cv__content .about p{ color:var(--muted); margin:6px 0 0; }
+.card h2{margin:0 0 8px;font-size:1.1rem;color:var(--navy-700)}
 
-/* Timeline */
-.timeline{ list-style:none; margin:4px 0 0; padding:0 0 0 18px; position:relative; border-left:3px solid var(--ring); }
-.timeline .item{ display:flex; gap:14px; margin:12px 0; position:relative; }
-.timeline .item::before{
-  content:""; position:absolute; left:-10px; top:10px; width:10px; height:10px;
-  border-radius:50%; background: var(--accent);
-}
-.timeline .year{ min-width:96px; font-weight:700; color:#111827; }
-.timeline .body h3{ margin:0 0 4px; font-size:16px; }
-.timeline .body p,.bullets{ margin:0; color:var(--muted); }
-.bullets{ padding-left:18px; }
+.job h3{margin:.1rem 0;font-size:1rem}
+.job h3 span{font-weight:400;color:var(--muted)}
+.meta{color:var(--muted);margin:.1rem 0 .5rem}
 
-/* 2-kolonne grid */
-.grid-2{ display:grid; grid-template-columns: 1fr 1fr; gap:20px; }
+/* Skills som “chips” (Flexbox) */
+.tags{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.tags li{
+  border:1px solid #cfe8fb;color:#0c4a6e;background:#e6f3fe;
+  border-radius:999px;padding:2px 10px;font-size:.9rem
+}
 
-/* Footer (samme farvetone som Om mig) */
-.site-footer{
-  background: var(--navy-80);
-  color:#fff;
-  padding: 22px 0;
-  border-top: 1px solid #0003;
-}
-.site-footer .container{ text-align:center; }
-.site-footer a{ color: var(--accent); text-decoration:none; }
-.site-footer a:hover{ text-decoration:underline; }
+/* Interests simple bullets */
+.bullets{margin:0;padding-left:18px}
 
-/* ===== Responsivitet ===== */
-@media (max-width: 1024px){
-  .cv{ grid-template-columns: 280px 1fr; }
+/* Languages med dot-rating (CSS) */
+.langs{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.langs li{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.dots{
+  --size:8px; --gap:6px; --count:5; --fill:#0ea5e9; --empty:#d1d5db;
+  display:grid; grid-auto-flow:column; gap:var(--gap);
 }
-@media (max-width: 768px){
-  .cv{ grid-template-columns: 1fr; }
-  .cv__sidebar{ order:2; }
-  .cv__content{ order:1; }
-  .grid-2{ grid-template-columns: 1fr; }
+.dots::before{
+  /* tegn 5 prikker og mask dem efter data-level */
+  content:"";
+  display:grid; grid-auto-flow:column; gap:var(--gap);
+  background:
+    radial-gradient(circle,var(--fill) 60%,#0000 61%) left / var(--size) var(--size) repeat-x;
+  width: calc(var(--count) * (var(--size) + var(--gap)) - var(--gap));
+  height: var(--size);
+  -webkit-mask:
+    linear-gradient(#000 0 0) 0 / calc(attr(data-level number, 0) / var(--count) * 100%) 100% no-repeat,
+    linear-gradient(#000 0 0);
+  mask:
+    linear-gradient(#000 0 0) 0 / calc(attr(data-level number, 0) / var(--count) * 100%) 100% no-repeat,
+    linear-gradient(#000 0 0);
 }
-@media (max-width: 375px){
-  .timeline .year{ min-width:84px; }
-  .site-nav ul{ gap:12px; }
+.dots{
+  background:
+    radial-gradient(circle,var(--empty) 60%,#0000 61%) left / var(--size) var(--size) repeat-x;
+  width: calc(var(--count) * (var(--size) + var(--gap)) - var(--gap));
+  height: var(--size);
+}
+
+/* ========= Responsivitet ========= */
+@media (max-width:1024px){
+  .cv{grid-template-columns:280px 1fr}
+}
+@media (max-width:768px){
+  .cv{grid-template-columns:1fr}
+}
+@media (max-width:375px){
+  .site-nav ul{gap:10px}
 }
