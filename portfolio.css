@@ -1,0 +1,39 @@
+/* ===== Base + tema (samme som CV) ===== */
+* { box-sizing: border-box; }
+:root{
+  --navy:#0f2749;
+  --navy-700:#10233f;
+  --ink:#0f172a;
+  --muted:#626d82;
+  --paper:#ffffff;
+  --bg:#f6f7fb;
+  --accent:#0ea5e9;
+  --ring:#e5e7eb;
+  --container:1100px;
+}
+body{
+  margin:0;
+  font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color:#1f2937;
+  background:var(--bg);
+}
+.container{max-width:var(--container);margin:0 auto;padding:0 16px}
+img{max-width:100%;height:auto;display:block;border-radius:10px}
+
+/* ===== Header/Nav (fjern bullets, farver) ===== */
+.site-header{background:var(--navy);color:#fff;border-bottom:1px solid #0b1a34}
+.site-nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.site-nav .brand{color:#fff;text-decoration:none;font-weight:700}
+.site-nav ul{list-style:none;display:flex;gap:16px;margin:0;padding:0} /* <- fjerner bullets */
+.site-nav a{color:#e5e7eb;text-decoration:none;padding:6px 10px;border-radius:8px}
+.site-nav a.active,.site-nav a:hover{background:#0b1a34}
+
+/* ===== Card (genbruges) ===== */
+.card{
+  background:var(--paper);
+  border:1px solid var(--ring);
+  border-radius:14px;
+  padding:16px 18px;
+  box-shadow:0 10px 24px -18px rgba(16,35,63,.35);
+}
+.card h2{margin:0 0 8px;font-size:1.1rem;color:var(--navy-700)}
