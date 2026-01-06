@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,123 +7,126 @@
   <link rel="stylesheet" href="cv.css" />
 </head>
 <body>
-<header class="site-header">
-  <nav class="site-nav container" aria-label="Primary navigation">
-    <a class="brand" href="about-me.html">Abdirahman I. I. Mahmed</a>
-    <ul>
-      <li><a href="about-me.html">About Me</a></li>
-      <li><a class="active" href="cv.html">CV</a></li>
-      <li><a href="portfolio.html">Portfolio</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header med navigation -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primær navigation">
+      <a class="brand" href="about-me.html">Abdirahman I. I. Mahmed</a>
+      <ul>
+        <li><a href="about-me.html">Om mig</a></li>
+        <li><a class="active" href="cv.html">CV</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="cv container" id="main">
-  <!-- LEFT: dark column -->
-  <aside class="cv-left">
-    <section class="intro">
-      <h1 class="name">
-        <span>Abdirahman</span>
-        <span>I. I. Mahmed</span>
-      </h1>
-      <p class="tagline"><em>Software Engineering Student</em></p>
+  <!-- Hovedindhold -->
+  <main class="cv container" id="main">
+    <!-- Venstre kolonne -->
+    <aside class="cv-left">
+      <section class="intro">
+        <h1 class="name">
+          <span>Abdirahman</span>
+          <span>I. I. Mahmed</span>
+        </h1>
+        <p class="tagline"><em>Software Engineering Student</em></p>
 
-      <address class="contact">
-        <ul>
-          <li>📍 Vestegaardsvej 21, Viby, Aarhus, Denmark</li>
-          <li>📞 +45 93 93 51 59</li>
-          <li>✉️ <a href="mailto:iabdirahman120@gmail.com">iabdirahman120@gmail.com</a></li>
+        <address class="contact">
+          <ul>
+            <li>📍 Vestegaardsvej 21, Viby, Aarhus, Denmark</li>
+            <li>📞 +45 93 93 51 59</li>
+            <li>✉️ <a href="mailto:iabdirahman120@gmail.com">iabdirahman120@gmail.com</a></li>
+          </ul>
+        </address>
+      </section>
+
+      <section class="panel">
+        <h2>📋 Profil</h2>
+        <p>
+          Jeg er Software Engineering studerende, motiveret af hurtig læring,
+          vidensdeling og at skabe simple, robuste løsninger, der giver værdi for brugere.
+          Jeg driver også en lille virksomhed og elsker at designe og skabe nye ting.
+          Mit brand hedder <strong>ILYA CLOTHING</strong>, et modest fashion label.
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>🎓 Uddannelse</h2>
+        <p>
+          <strong>Software Engineering (B.Eng.)</strong><br />
+          VIA University College<br />
+          09/2025 – 01/2029
+        </p>
+      </section>
+
+      <section class="panel">
+        <h2>💬 Favoritcitat</h2>
+        <blockquote>
+          Great websites are crafted, not hurried—built with passion, dedication, and precision.
+        </blockquote>
+      </section>
+    </aside>
+
+    <!-- Højre kolonne -->
+    <section class="cv-right">
+      <section class="card">
+        <h2>🧳 Erfaring</h2>
+
+        <article class="job">
+          <h3>SPORT 24 <span>— Customer Advisor</span></h3>
+          <p class="meta">06/2019 – 06/2025 | Tilst, Aarhus</p>
+          <p>
+            Som kundevejleder hos SPORT 24 hjalp jeg kunder med at finde det rette tøj,
+            fodtøj og udstyr, rådgav om pasform, størrelser og materialer, og sikrede en god
+            oplevelse fra velkomst til checkout. Jeg håndterede POS‑salg, returneringer,
+            vareopfyldning og let merchandising, samt støttede kampagner og mersalg.
+          </p>
+        </article>
+
+        <article class="job">
+          <h3>Taxi <span>— Flex Driver</span></h3>
+          <p class="meta">01/2025 – Nu | Jylland, Danmark</p>
+          <p>
+            Som flexchauffør transporterer jeg kunder sikkert og effektivt til deres destinationer,
+            leverer høj kundeservice og komfort, samt håndterer opgaver som ruteplanlægning
+            og basal vedligeholdelse af køretøjet.
+          </p>
+        </article>
+      </section>
+
+      <section class="card">
+        <h2>🛠️ Kompetencer</h2>
+        <ul class="tags">
+          <li>HTML5</li>
+          <li>CSS</li>
+          <li>Java</li>
+          <li>JavaScript (under læring)</li>
         </ul>
-      </address>
+      </section>
+
+      <section class="card">
+        <h2>🎯 Interesser</h2>
+        <ul class="bullets">
+          <li>Rejser</li>
+          <li>Programmering</li>
+          <li>Fodbold</li>
+          <li>Fitness</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>🌐 Sprog</h2>
+        <ul class="langs">
+          <li><span>Engelsk</span><span class="dots" data-level="5" aria-label="5 ud af 5"></span></li>
+          <li><span>Dansk</span><span class="dots" data-level="4" aria-label="4 ud af 5"></span></li>
+          <li><span>Somali</span><span class="dots" data-level="5" aria-label="5 ud af 5"></span></li>
+        </ul>
+      </section>
     </section>
+  </main>
 
-    <section class="panel">
-      <h2>📋 Profile</h2>
-      <p>
-        I am a Software Engineering student motivated by learning fast,
-        sharing knowledge, and creating simple, robust solutions that provide value to users.
-        I also run a small business and enjoy designing and creating new things.
-        My brand is called <strong>ILYA CLOTHING</strong>, a modest fashion label.
-      </p>
-    </section>
-
-    <section class="panel">
-      <h2>🎓 Education</h2>
-      <p>
-        <strong>Software Engineering (B.Eng.)</strong><br />
-        VIA University College<br />
-        09/2025 – 01/2029
-      </p>
-    </section>
-
-    <section class="panel">
-      <h2>💬 Favorite Quote</h2>
-      <p>
-        Great websites are crafted, not hurried—built with passion, dedication, and precision.
-      </p>
-    </section>
-  </aside>
-
-  <!-- RIGHT: light column -->
-  <section class="cv-right">
-    <section class="card">
-      <h2>🧳 Professional Experience</h2>
-
-      <article class="job">
-        <h3>SPORT 24, <span>Customer Advisor</span></h3>
-        <p class="meta">06/2019 – 06/2025 | Tilst, Aarhus</p>
-        <p>
-          As a customer advisor at SPORT 24, I helped customers find the right clothing, footwear,
-          and equipment, advised on fit, sizes, and materials, and ensured a good in-store experience
-          from greeting to checkout. I handled POS sales, exchanges/returns, replenishment, and
-          light merchandising, and supported campaigns and add-on sales as part of the team.
-        </p>
-      </article>
-
-      <article class="job">
-        <h3>Taxi, <span>Flex Driver</span></h3>
-        <p class="meta">01/2025 – Present | Jutland, Denmark</p>
-        <p>
-          As a flex driver, I transport customers safely and efficiently to their destinations,
-          provide a high standard of customer service and comfort, and handle tasks such as
-          route planning and basic vehicle maintenance.
-        </p>
-      </article>
-    </section>
-
-    <section class="card">
-      <h2>🛠️ Skills</h2>
-      <ul class="tags">
-        <li>HTML5</li>
-        <li>CSS</li>
-        <li>Java</li>
-        <li>JavaScript (learning)</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>🎯 Interests</h2>
-      <ul class="bullets">
-        <li>Travel</li>
-        <li>Programming</li>
-        <li>Football</li>
-        <li>Fitness</li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>🌐 Languages</h2>
-      <ul class="langs">
-        <li><span>English</span><span class="dots" data-level="5" aria-label="5 out of 5"></span></li>
-        <li><span>Danish</span><span class="dots" data-level="4" aria-label="4 out of 5"></span></li>
-        <li><span>Somali</span><span class="dots" data-level="5" aria-label="5 out of 5"></span></li>
-      </ul>
-    </section>
-  </section>
-</main>
-
-<footer class="site-footer">
-  <div class="container">© 2025 Abdirahman I. I. Mahmed</div>
-</footer>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Abdirahman I. I. Mahmed</div>
+  </footer>
 </body>
 </html>

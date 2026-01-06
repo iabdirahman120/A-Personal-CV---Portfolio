@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -7,82 +7,119 @@
   <link rel="stylesheet" href="portfolio.css" />
 </head>
 <body>
-<header class="site-header">
-  <nav class="site-nav container" aria-label="Primary navigation">
-    <a class="brand" href="about-me.html">Abdirahman I. I. Mahmed</a>
-    <ul>
-      <li><a href="about-me.html">About Me</a></li>
-      <li><a href="cv.html">CV</a></li>
-      <li><a class="active" href="portfolio.html">Portfolio</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header med navigation -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Primær navigation">
+      <a class="brand" href="about-me.html">Abdirahman I. I. Mahmed</a>
+      <ul>
+        <li><a href="about-me.html">Om mig</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a class="active" href="portfolio.html">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main class="portfolio container" id="main" role="main">
-  <h1 class="visually-hidden" style="position:absolute;left:-9999px">Portfolio</h1>
+  <!-- Hovedindhold -->
+  <main class="portfolio container" id="main">
+    <h1 class="visually-hidden">Portfolio</h1>
 
-  <section aria-label="Projects">
-    <div class="projects-grid">
-      <!-- Project 1 -->
-      <article class="card project-card">
-        <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"       
-        target="_blank" rel="noopener" aria-label="View project: CV Website">View project</a>
-        <h2>CV Website</h2>
-        <p>A simple three-page personal site (About, CV, Portfolio) with a consistent navbar and responsive layout.</p>
-        <ul class="tags">
-          <li>HTML</li><li>CSS</li><li>Grid</li><li>Flexbox</li>
-        </ul>
-      </article>
+    <!-- Projekter -->
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title" class="visually-hidden">Mine projekter</h2>
+      <div class="projects-grid">
+        
+        <!-- Projekt 1 -->
+        <article class="card project-card">
+          <header>
+            <h3>CV Website</h3>
+          </header>
+          <p>
+            En simpel tre-siders personlig hjemmeside (Om mig, CV, Portfolio) med en konsistent navbar og responsivt layout.
+          </p>
+          <ul class="tags">
+            <li>HTML</li><li>CSS</li><li>Grid</li><li>Flexbox</li>
+          </ul>
+          <p>
+            <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"
+               target="_blank" rel="noopener" aria-label="Se projekt: CV Website">Se projekt</a>
+          </p>
+        </article>
 
-      <!-- Project 2 -->
-      <article class="card project-card">
-     <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"       
-        target="_blank" rel="noopener" aria-label="View project: CV Website">View project</a>
-        <h2>Product Cards UI</h2>
-        <p>Accessible product cards with clear hierarchy, focus states, and good color contrast.</p>
-        <ul class="tags">
-          <li>CSS</li><li>A11y</li><li>Design</li>
-        </ul>
-      </article>
+        <!-- Projekt 2 -->
+        <article class="card project-card">
+          <header>
+            <h3>Product Cards UI</h3>
+          </header>
+          <p>
+            Tilgængelige produktkort med klar hierarki, fokusmarkeringer og god farvekontrast.
+          </p>
+          <ul class="tags">
+            <li>CSS</li><li>A11y</li><li>Design</li>
+          </ul>
+          <p>
+            <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"
+               target="_blank" rel="noopener" aria-label="Se projekt: Product Cards UI">Se projekt</a>
+          </p>
+        </article>
 
-      <!-- Project 3 -->
-      <article class="card project-card">
-        <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"       
-        target="_blank" rel="noopener" aria-label="View project: CV Website">View project</a>
-        <h2>Contact Form</h2>
-        <p>Form with labels, help text, and error hints; keyboard and screen-reader friendly.</p>
-        <ul class="tags">
-          <li>Forms</li><li>WCAG</li><li>UX</li>
-        </ul>
-      </article>
+        <!-- Projekt 3 -->
+        <article class="card project-card">
+          <header>
+            <h3>Contact Form</h3>
+          </header>
+          <p>
+            Formular med labels, hjælpetekst og fejlmeddelelser; tastatur- og skærmlæservenlig.
+          </p>
+          <ul class="tags">
+            <li>Forms</li><li>WCAG</li><li>UX</li>
+          </ul>
+          <p>
+            <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"
+               target="_blank" rel="noopener" aria-label="Se projekt: Contact Form">Se projekt</a>
+          </p>
+        </article>
 
-      <!-- Project 4 -->
-      <article class="card project-card">
-        <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"       
-        target="_blank" rel="noopener" aria-label="View project: CV Website">View project</a>
-        <h2>Typography Demo</h2>
-        <p>Scale, rhythm, and spacing for readable content across mobile, tablet, and desktop.</p>
-        <ul class="tags">
-          <li>CSS</li><li>Typography</li><li>Responsive</li>
-        </ul>
-      </article>
+        <!-- Projekt 4 -->
+        <article class="card project-card">
+          <header>
+            <h3>Typography Demo</h3>
+          </header>
+          <p>
+            Skala, rytme og spacing for læsevenligt indhold på mobil, tablet og desktop.
+          </p>
+          <ul class="tags">
+            <li>CSS</li><li>Typography</li><li>Responsive</li>
+          </ul>
+          <p>
+            <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"
+               target="_blank" rel="noopener" aria-label="Se projekt: Typography Demo">Se projekt</a>
+          </p>
+        </article>
 
-      <!-- Project 5 -->
-      <article class="card project-card">
-      <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"       
-        target="_blank" rel="noopener" aria-label="View project: CV Website">View project</a>
-        <h2>Mini Landing Page</h2>
-        <p>Hero, call-to-action, and features section — built with pure HTML & CSS, no JS.</p>
-        <ul class="tags">
-          <li>Layout</li><li>Grid</li><li>Design</li>
-        </ul>
-      </article>
-    </div>
-  </section>
-</main>
+        <!-- Projekt 5 -->
+        <article class="card project-card">
+          <header>
+            <h3>Mini Landing Page</h3>
+          </header>
+          <p>
+            Hero, call-to-action og features-sektion — bygget med ren HTML & CSS, uden JS.
+          </p>
+          <ul class="tags">
+            <li>Layout</li><li>Grid</li><li>Design</li>
+          </ul>
+          <p>
+            <a class="btn" href="https://github.com/iabdirahman120/A-Personal-CV---Portfolio.git"
+               target="_blank" rel="noopener" aria-label="Se projekt: Mini Landing Page">Se projekt</a>
+          </p>
+        </article>
 
-<footer class="site-footer">
-  <div class="container">© 2025 Abdirahman I. I. Mahmed</div>
-</footer>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">© 2025 Abdirahman I. I. Mahmed</div>
+  </footer>
 </body>
 </html>
